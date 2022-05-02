@@ -5,9 +5,14 @@ import 'normalize.css'
 import './styles/styles.scss'
 import AppRoutes from './routers/AppRoutes'
 import store from './redux/store/configStore'
+import { Provider } from 'react-redux'
 
 
 console.log(store.getState());
 
 const root = createRoot(document.getElementById('root'))
-root.render(<AppRoutes />)
+root.render(
+    <Provider store={store}>
+        <AppRoutes />
+    </Provider>
+)

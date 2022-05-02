@@ -1,4 +1,23 @@
-const expenseState = [];
+const expenseState = [{
+    id: '1',
+    description: 'Redux Course' ,
+    note: '',
+    amount: 195,
+    createdAt: 0
+}, {
+    id: '2',
+    description: 'Rent',
+    note: '',
+    amount: 1090,
+    createdAt: 5000
+}, {
+    id: '3',
+    description: 'Credit Card',
+    note: '',
+    amount: 4500,
+    createdAt: 9000
+}
+];
 
 /**
  * 

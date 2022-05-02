@@ -17,8 +17,6 @@ const AppRoutes = () => {
                 <Route path="/edit/:id" element={<Edit/>} />
                 <Route path='/help' element={<Help/>} />
                 <Route path='*' element={<NotFound/>} />
-                
-
             </Routes>
 
         </BrowserRouter>
