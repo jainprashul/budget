@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import getVisibileExpenses from '../redux/selectors/expenses'
+import AddExpense from './AddExpense'
 import ExpenseFilter from './ExpenseFilter'
 import ExpenseItem from './ExpenseItem'
 
@@ -19,6 +20,9 @@ const ExpenseList = () => {
             {expenses.map(expense => (
                 <ExpenseItem key={expense.id} {...expense} />
             ))}
+
+
+            <AddExpense />
 
 
         </div>

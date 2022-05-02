@@ -2,14 +2,14 @@ const expenseState = [{
     id: '1',
     description: 'Redux Course' ,
     note: '',
-    amount: 195,
+    amount: 1950,
     createdAt: 0
 }, {
     id: '2',
     description: 'Rent',
     note: '',
-    amount: 1090,
-    createdAt: 5000
+    amount: 5000,
+    createdAt: -3000
 }, {
     id: '3',
     description: 'Credit Card',

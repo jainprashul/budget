@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setTextFilter } from '../redux/actions/fiters'
+import { setTextFilter, sortByAmount, sortByDate } from '../redux/actions/fiters'
 
 const ExpenseFilter = () => {
     const filter = useSelector(state => state.filter)
@@ -13,6 +13,18 @@ const ExpenseFilter = () => {
             // dispatch an action
             dispatch(setTextFilter(text))
         }} />
+
+        <select value={filter.sortBy} onChange={e=> {
+            const sortBy = e.target.value
+            if (sortBy === 'date') {
+                dispatch(sortByDate())
+            } else if (sortBy === 'amount') {
+                dispatch(sortByAmount())
+            }
+        }}>
+            <option value="date">Date</option>
+            <option value="amount">Amount</option>
+        </select>
 
     </div>
   )
