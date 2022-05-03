@@ -6,8 +6,10 @@ import filterReducer from "../reducers/filters";
 const store = configureStore({
     reducer: {
         expense : expenseReducer,
-        filter : filterReducer
-    }
+        filter : filterReducer,
+
+    },
+    devTools: true
 })
 
 export default store;

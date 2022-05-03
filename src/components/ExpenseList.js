@@ -22,7 +22,6 @@ const ExpenseList = () => {
             ))}
 
 
-            <AddExpense />
 
 
         </div>
