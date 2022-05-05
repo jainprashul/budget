@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 import { SingleDatePicker } from 'react-dates'
 import { useDispatch } from 'react-redux'
 import { useNavigate, useRoutes } from 'react-router-dom'
-import { addExpense } from '../redux/actions/expense'
+
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
+import { addExpense } from '../redux/slices/expenseSlice'
 
 const AddExpense = () => {
     const dispatch = useDispatch()
@@ -45,7 +46,6 @@ export const ExpenseForm = ({ onSubmit, expense : data }) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault()
-        console.log(expense)
         if (description === '' || amount === 0) {
             return alert('Please fill in all fields')
         }

@@ -2,7 +2,7 @@ import moment from 'moment';
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom';
-import { removeExpense } from '../redux/actions/expense';
+import { removeExpense } from '../redux/slices/expenseSlice';
 
 const ExpenseItem = ({id ,description , amount, createdAt}) => {
     const dispatch = useDispatch();
