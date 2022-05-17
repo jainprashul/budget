@@ -2,7 +2,7 @@ import moment from 'moment';
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom';
-import { removeExpense } from '../redux/slices/expenseSlice';
+import { removeExpense, removeAction } from '../redux/slices/expenseSlice';
 
 const ExpenseItem = ({id ,description , amount, createdAt}) => {
     const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const ExpenseItem = ({id ,description , amount, createdAt}) => {
         </Link>
         <p>{amount} - {moment(createdAt).format('l')}</p>
         <button className="btn btn-danger" onClick={()=> {
-            dispatch(removeExpense({id}))
+            dispatch(removeAction({id}))
         }}>Remove</button>
     </div>
   )

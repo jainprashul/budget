@@ -6,7 +6,7 @@ import { useNavigate, useRoutes } from 'react-router-dom'
 
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
-import { addExpense } from '../redux/slices/expenseSlice'
+import { addExpense , add  } from '../redux/slices/expenseSlice'
 
 const AddExpense = () => {
     const dispatch = useDispatch()
@@ -15,7 +15,7 @@ const AddExpense = () => {
         <div>
             <h1>Add Expense</h1>
             <ExpenseForm onSubmit={(expense => {
-                dispatch(addExpense(expense))
+                dispatch(add(expense))
             })} />
         </div>
     )

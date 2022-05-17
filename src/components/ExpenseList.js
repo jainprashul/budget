@@ -7,6 +7,8 @@ import ExpenseItem from './ExpenseItem'
 const ExpenseList = () => {
 
     const dispatch = useDispatch();
+  console.count('ExpenseList')
+
 
 
     const expenses = useSelector(state => {
